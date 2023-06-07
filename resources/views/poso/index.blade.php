@@ -37,6 +37,7 @@
                                         <th>No</th>
                                         
 										<th>Lista Id</th>
+                                        <th>user</th>
 										<th>Presion</th>
 										<th>Gas</th>
 										<th>Conbustible</th>
@@ -54,7 +55,8 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $poso->lista_id }}</td>
+											<td>{{ $poso->listum->nombre}}</td>
+                                            <td>{{ $poso->user}}</td>
 											<td>{{ $poso->presion }}</td>
 											<td>{{ $poso->gas }}</td>
 											<td>{{ $poso->conbustible }}</td>

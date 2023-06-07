@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $lista_id
+ * @property $user_id
  * @property $presion
  * @property $gas
  * @property $conbustible
@@ -25,6 +26,7 @@ class Poso extends Model
     
     static $rules = [
 		'lista_id' => 'required',
+    'user_id' => 'required',
 		'presion' => 'required',
 		'gas' => 'required',
 		'conbustible' => 'required',
@@ -38,7 +40,7 @@ class Poso extends Model
      *
      * @var array
      */
-    protected $fillable = ['lista_id','presion','gas','conbustible','carbono'];
+    protected $fillable = ['lista_id','user_id','presion','gas','conbustible','carbono'];
 
 
     /**

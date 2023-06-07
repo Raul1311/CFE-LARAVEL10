@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Poso;
 use App\Models\Listum;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 /**
@@ -34,7 +35,8 @@ class PosoController extends Controller
     {
         $poso = new Poso();
         $listum = listum::pluck('nombre','id'); 
-        return view('poso.create', compact('poso','listum'));
+        $User = user::pluck('name','id');
+        return view('poso.create', compact('poso','listum','User'));
         
     }
 

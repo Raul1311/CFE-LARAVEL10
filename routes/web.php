@@ -22,5 +22,7 @@ Auth::routes();
 Route::resource('lista', App\Http\Controllers\listumController::class)->middleware('auth');
 Route::resource('datos', App\Http\Controllers\DatoController::class)->middleware('auth');
 Route::resource('posos', App\Http\Controllers\PosoController::class)->middleware('auth');
+Route::get('importar', 'ImportarController@index');
+Route::post('poso/importar', 'ImportarController@importar');
 
 

@@ -2,9 +2,14 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('lista_id') }}
+            {{ Form::label('lista') }}
             {{ Form::select('lista_id',$listum, $poso->lista_id, ['class' => 'form-control' . ($errors->has('lista_id') ? ' is-invalid' : ''), 'placeholder' => 'Lista Id']) }}
             {!! $errors->first('lista_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('usuario') }}
+            {{ Form::select('user_id',$User, $poso->user_id, ['class' => 'form-control' . ($errors->has('user_id') ? ' is-invalid' : ''), 'placeholder' => 'usuario']) }}
+            {!! $errors->first('user_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('presion') }}

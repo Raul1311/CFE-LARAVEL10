@@ -15,10 +15,12 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->bigInteger('lista_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->float('presion');
             $table->float('gas');
             $table->float('conbustible');
             $table->float('carbono');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('lista_id')->references('id')->on('lista')->onDelete("cascade");
             $table->timestamps();
         });
