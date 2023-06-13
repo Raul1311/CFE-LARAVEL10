@@ -25,6 +25,10 @@
                             {{ $poso->lista_id }}
                         </div>
                         <div class="form-group">
+                            <strong>usuario:</strong>
+                            {{ $poso->user_id}}
+                        </div>
+                        <div class="form-group">
                             <strong>Presion:</strong>
                             {{ $poso->presion }}
                         </div>

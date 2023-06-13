@@ -77,9 +77,10 @@ class PosoController extends Controller
      */
     public function edit($id)
     {
-        $poso = Poso::find($id);
-
-        return view('poso.edit', compact('poso'));
+        $poso = new Poso();
+        $listum = listum::pluck('nombre','id'); 
+        $User = user::pluck('name','id');
+        return view('poso.create', compact('poso','listum','User'));
     }
 
     /**

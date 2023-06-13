@@ -49,6 +49,9 @@ class Poso extends Model
     public function listum()
     {
         return $this->hasOne('App\Models\Listum', 'id', 'lista_id');
+        return $this->hasOne('App\Models\User', 'name', 'user_id');
+        
+
     }
     
 
